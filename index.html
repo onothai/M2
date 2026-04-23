@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>เรียนดวงกับบรมครูโหร พัฒนา พัฒนศิริ | เริ่มเรียนแบบมีลำดับ</title>
+    <meta
+      name="description"
+      content="หน้านำทางสำหรับคนที่อยากเรียนโหราศาสตร์ไทยแบบมีลำดับ: เริ่มจากจักรราศี → ดาว → เรือนภพ/ทักษา → เกณฑ์ พร้อมคลิปแนะนำและสารบัญบทเรียน"
+    />
+    <meta name="theme-color" content="#0b1020" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#content">ข้ามไปเนื้อหา</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="กลับไปด้านบน">
+          <span class="brand-mark">
+            <img src="./img/channels_profile.jpg" alt="โลโก้ช่อง" />
+          </span>
+          <span class="brand-text">
+            <span class="brand-title">เรียนดวงกับบรมครูโหร</span>
+            <span class="brand-subtitle">พัฒนา พัฒนศิริ</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="เมนูหลัก">
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu">
+            <span class="nav-toggle-lines" aria-hidden="true"></span>
+            เมนู
+          </button>
+          <div id="navMenu" class="nav-menu">
+            <a href="#why">จุดเด่น</a>
+            <a href="#path">เริ่มตรงไหน</a>
+            <a href="#topics">หัวข้อเรียน</a>
+            <a href="#featured">วิดีโอแนะนำ</a>
+            <a href="#faq">คำถามที่พบบ่อย</a>
+          </div>
+        </nav>
+
+        <div class="header-cta">
+          <a class="btn btn-ghost" href="https://www.horapatana.com/" target="_blank" rel="noreferrer"
+            >ดูบทเรียนบนเว็บไซต์</a
+          >
+          <a
+            class="btn btn-primary"
+            href="https://www.youtube.com/@horapatana"
+            target="_blank"
+            rel="noreferrer"
+            >ติดตามช่อง YouTube</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main id="content">
+      <section id="top" class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">โหราศาสตร์ไทย • ค่อยเป็นค่อยไป • เน้นเข้าใจ</p>
+            <h1>อยากเริ่มเรียนดูดวงแบบมีหลัก? เริ่มจากพื้นฐาน แล้วค่อยต่อเป็นระบบ</h1>
+            <p class="lead">
+              หน้านี้ทำไว้ให้ “คนเพิ่งเข้ามาใหม่” เริ่มได้ไม่หลงทาง—มีเส้นทางแนะนำและลิงก์ไปยังบทเรียน/คลิปที่ควรดู
+              ก่อน เพื่อปูพื้นให้แน่น แล้วค่อยต่อยอดไปอ่านดวงจริง
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#path">เริ่มเรียนตอนแรก (พื้นฐาน)</a>
+              <a class="btn btn-ghost" href="#topics">ดูหัวข้อทั้งหมด</a>
+            </div>
+
+            <dl class="hero-badges" aria-label="จุดขายสั้นๆ">
+              <div class="badge">
+                <dt>เหมาะกับ</dt>
+                <dd>มือใหม่ / ทบทวน</dd>
+              </div>
+              <div class="badge">
+                <dt>แนวสอน</dt>
+                <dd>เรียงเป็นลำดับ</dd>
+              </div>
+              <div class="badge">
+                <dt>เป้าหมาย</dt>
+                <dd>ต่อยอดอ่านดวงได้จริง</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="hero-card" aria-label="การ์ดนำทาง">
+            <div class="card">
+              <div class="card-header">
+                <p class="card-title">เริ่มยังไงดี ไม่ให้สับสน?</p>
+                <p class="card-subtitle">เลือกแนวทางตามพื้นฐานของคุณได้เลย</p>
+              </div>
+              <div class="card-body">
+                <div class="path-pills" role="list">
+                  <button class="pill is-active" type="button" data-path="beginner">มือใหม่</button>
+                  <button class="pill" type="button" data-path="review">ทบทวนพื้นฐาน</button>
+                  <button class="pill" type="button" data-path="advance">ต่อยอดพยากรณ์</button>
+                </div>
+
+                <div class="path-panel" data-panel="beginner">
+                  <ol class="mini-steps">
+                    <li><strong>จักรราศี:</strong> ปูคำพื้นฐาน “ราศี/ลัคนา/ธาตุ” ให้ชัด</li>
+                    <li><strong>ดาวพระเคราะห์:</strong> ทำความเข้าใจนิสัย/หน้าที่ของดาว</li>
+                    <li><strong>เรือนภพ & ทักษา:</strong> เริ่มเอาเครื่องมือมาประกอบการอ่าน</li>
+                  </ol>
+                  <div class="card-actions">
+                    <a class="btn btn-primary btn-block" href="#path">ไปที่เส้นทางเริ่มเรียน</a>
+                    <a class="btn btn-ghost btn-block" href="https://www.youtube.com/@horapatana" target="_blank" rel="noreferrer"
+                      >เปิดช่อง YouTube</a
+                    >
+                  </div>
+                </div>
+
+                <div class="path-panel is-hidden" data-panel="review">
+                  <ol class="mini-steps">
+                    <li><strong>สรุปจักรราศี:</strong> เคลียร์จุดที่คนมักสับสน (ภาค/เพศ/ธาตุ)</li>
+                    <li><strong>ดาวมาตรฐาน:</strong> เกษตร/อุจจ์/นิจจ์ + วิธี “ให้ค่าน้ำหนัก”</li>
+                    <li><strong>องค์เกณฑ์:</strong> จัดระเบียบวิธีคิดก่อนลงมืออ่านดวง</li>
+                  </ol>
+                  <div class="card-actions">
+                    <a class="btn btn-primary btn-block" href="#topics">ดูหมวดบทเรียน</a>
+                    <a class="btn btn-ghost btn-block" href="https://www.horapatana.com/" target="_blank" rel="noreferrer"
+                      >เปิดเว็บรวมบทเรียน</a
+                    >
+                  </div>
+                </div>
+
+                <div class="path-panel is-hidden" data-panel="advance">
+                  <ol class="mini-steps">
+                    <li><strong>เรือนภพ:</strong> ฝึกจับ “ภพ” ให้เป็นเรื่องเป็นราว</li>
+                    <li><strong>ทักษา:</strong> ใช้ประกอบให้ภาพชัดขึ้น ไม่หลุดประเด็น</li>
+                    <li><strong>เกณฑ์ต่างๆ:</strong> ชั่งน้ำหนักดี-เสียให้บาลานซ์</li>
+                  </ol>
+                  <div class="card-actions">
+                    <a class="btn btn-primary btn-block" href="#featured">ดูวิดีโอแนะนำ</a>
+                    <a class="btn btn-ghost btn-block" href="#faq">อ่านคำถามที่พบบ่อย</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p class="fineprint">
+              หมายเหตุ: หน้านี้ทำไว้เป็น “แผนที่การเรียน” ไม่ใช่หน้า “ขายดวง” — ตั้งใจให้คนใหม่เริ่มดูคลิปได้ทันที
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="why" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>จุดเด่นของช่องนี้</h2>
+            <p>ถ้าคุณชอบเรียนแบบเรียงลำดับ ไม่กระโดดข้ามขั้น ช่องนี้ทำคอนเทนต์ไว้ค่อนข้างเป็นหมวด อ่านง่ายและทบทวนง่าย</p>
+          </div>
+
+          <div class="grid features">
+            <article class="feature">
+              <h3>สอนเป็นบท เป็นหมวด</h3>
+              <p>มีเส้นเรื่องชัด ดูจบแล้ว “รู้ว่าควรต่ออะไร” ไม่หลงไปคนละทาง</p>
+            </article>
+            <article class="feature">
+              <h3>เริ่มจากหลักก่อนทำนาย</h3>
+              <p>เน้นเข้าใจเหตุผลมากกว่าท่องจำ ทำให้ต่อยอดได้ยาวๆ</p>
+            </article>
+            <article class="feature">
+              <h3>ต่อยอดใช้งานได้จริง</h3>
+              <p>จากจักรราศี → ดาว → เรือนภพ/ทักษา → เกณฑ์ แล้วค่อยเอาไปประกอบการอ่านจริง</p>
+            </article>
+            <article class="feature">
+              <h3>มือใหม่ก็เริ่มได้ / คนทบทวนก็เหมาะ</h3>
+              <p>จะเริ่มจากศูนย์หรือเลือกเติมเฉพาะจุดที่ยังไม่แน่นก็ได้</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section muted">
+        <div class="container">
+          <div class="section-head">
+            <h2>เหมาะกับใคร</h2>
+          </div>
+
+          <div class="grid audience">
+            <article class="audience-card">
+              <h3>มือใหม่เริ่มจากศูนย์</h3>
+              <p>อยากเริ่มแบบถูกทาง แต่เปิดเจอคลิปเยอะจนไม่รู้จะดูอะไรก่อน</p>
+            </article>
+            <article class="audience-card">
+              <h3>ดูดวงได้บ้าง แต่อยากจัดระบบ</h3>
+              <p>อยาก “เรียงใหม่ให้เป็นหมวด” จะได้ต่อยอดได้ไม่สะดุด</p>
+            </article>
+            <article class="audience-card">
+              <h3>ต่อยอดสู่การพยากรณ์/วางฤกษ์</h3>
+              <p>อยากมีกรอบคิดชัดๆ เวลาอ่านจะชั่งน้ำหนักได้ ไม่เหวี่ยงไปทางใดทางหนึ่ง</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="path" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>เริ่มเรียนตรงไหน (Learning Path)</h2>
+            <p>แนะนำให้ไล่ตามนี้ก่อน 1 รอบ พอจับแกนได้แล้วค่อยแตกไปดูหัวข้อย่อย</p>
+          </div>
+
+          <div class="path-steps">
+            <div class="step">
+              <div class="step-num" aria-hidden="true">1</div>
+              <div class="step-body">
+                <h3>จักรราศี (พื้นฐาน)</h3>
+                <p>ปูศัพท์และโครงให้แน่น (ราศี/ลัคนา/ธาตุ) เพื่อไม่หลงตอนเริ่มอ่านจริง</p>
+                <a class="link" href="https://www.horapatana.com/" target="_blank" rel="noreferrer"
+                  >ไปที่สารบัญบทเรียน</a
+                >
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-num" aria-hidden="true">2</div>
+              <div class="step-body">
+                <h3>ดาวพระเคราะห์</h3>
+                <p>รู้บทบาทของดาวแต่ละดวง แล้วค่อยเอาไป “ผูกเรื่อง” กับภพ</p>
+                <a class="link" href="https://www.horapatana.com/" target="_blank" rel="noreferrer"
+                  >ไปที่สารบัญบทเรียน</a
+                >
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-num" aria-hidden="true">3</div>
+              <div class="step-body">
+                <h3>เรือนภพ + ทักษา + เกณฑ์</h3>
+                <p>เอาเครื่องมือหลักมาประกอบกัน เพื่อเริ่มอ่านแบบมีโครงและชั่งน้ำหนักได้ดีขึ้น</p>
+                <div class="step-links">
+                  <a class="link" href="https://www.horapatana.com/" target="_blank" rel="noreferrer"
+                    >ไปที่สารบัญบทเรียน</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta-band">
+            <div class="cta-band-copy">
+              <h3>อยากเริ่มวันนี้?</h3>
+              <p>ถ้าพร้อมแล้ว กดติดตามไว้ก่อน แล้วเริ่มจาก “จักรราศี” ตามเส้นทางด้านบนได้เลย</p>
+            </div>
+            <div class="cta-band-actions">
+              <a class="btn btn-primary" href="https://www.youtube.com/@horapatana" target="_blank" rel="noreferrer"
+                >ไปที่ช่อง YouTube</a
+              >
+              <a class="btn btn-ghost" href="https://www.horapatana.com/" target="_blank" rel="noreferrer">ดูสารบัญบทเรียน</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="topics" class="section muted">
+        <div class="container">
+          <div class="section-head">
+            <h2>หัวข้อเรียน (ภาพรวม)</h2>
+            <p>ทั้งหมดต่อกันเป็นเส้นเดียว แนะนำไล่ 1→2 ก่อน แล้วค่อยเลือกบทที่อยากเติมให้แน่น</p>
+          </div>
+
+          <div class="grid topics">
+            <a class="topic" href="https://www.horapatana.com/" target="_blank" rel="noreferrer">
+              <h3><span class="topic-kicker">บทที่ 1:</span> <span class="topic-title">จักรราศี</span></h3>
+              <p>ปูพื้นราศี/ลัคนา/ธาตุ และตัวแปรที่ต้องใช้บ่อย</p>
+            </a>
+            <a class="topic" href="https://www.horapatana.com/" target="_blank" rel="noreferrer">
+              <h3><span class="topic-kicker">บทที่ 2:</span> <span class="topic-title">ดาวพระเคราะห์</span></h3>
+              <p>ทำความเข้าใจดาวแต่ละดวง แล้วค่อยเอาไปประกอบการอ่าน</p>
+            </a>
+            <a class="topic" href="https://www.horapatana.com/" target="_blank" rel="noreferrer">
+              <h3><span class="topic-kicker">บทที่ 3:</span> <span class="topic-title">นิทานชาติเวร</span></h3>
+              <p>ใช้เรื่องเล่าช่วยจำความสัมพันธ์ของดาวให้ติดหัวแบบไม่งง</p>
+            </a>
+            <a class="topic" href="https://www.horapatana.com/" target="_blank" rel="noreferrer">
+              <h3><span class="topic-kicker">บทที่ 4:</span> <span class="topic-title">ดาวมาตรฐาน</span></h3>
+              <p>เกษตร/อุจจ์/นิจจ์ และตำแหน่งที่ใช้ “ให้ค่าน้ำหนัก”</p>
+            </a>
+            <a class="topic" href="https://www.horapatana.com/" target="_blank" rel="noreferrer">
+              <h3><span class="topic-kicker">บทที่ 5:</span> <span class="topic-title">เรือนภพ</span></h3>
+              <p>ภพต่างๆ และวิธีจับเรื่องราวชีวิตให้เป็นขั้นเป็นตอน</p>
+            </a>
+            <a class="topic" href="https://www.horapatana.com/" target="_blank" rel="noreferrer">
+              <h3><span class="topic-kicker">บทที่ 6:</span> <span class="topic-title">ทักษา</span></h3>
+              <p>อีกเครื่องมือที่ช่วยประกอบการอ่านให้ครบมิติ</p>
+            </a>
+            <a class="topic" href="https://www.horapatana.com/" target="_blank" rel="noreferrer">
+              <h3><span class="topic-kicker">บทที่ 7:</span> <span class="topic-title">องค์เกณฑ์</span></h3>
+              <p>กรอบคิดสำหรับชั่งน้ำหนัก แยก “ข้อมูล” ออกจาก “ความรู้สึก”</p>
+            </a>
+            <a class="topic" href="https://www.horapatana.com/" target="_blank" rel="noreferrer">
+              <h3><span class="topic-kicker">บทที่ 8:</span> <span class="topic-title">เกณฑ์อื่นๆ</span></h3>
+              <p>เกณฑ์เสริมสำหรับเก็บรายละเอียดและเพิ่มความแม่น</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="featured" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>วิดีโอแนะนำ</h2>
+            <p>ถ้าไม่รู้จะเริ่มคลิปไหน ลองเริ่ม 3 คลิปนี้ก่อน แล้วค่อยไล่ต่อเป็นหมวด จะจับภาพรวมไวขึ้น</p>
+          </div>
+
+          <div class="grid videos">
+            <article class="video-card">
+              <div class="video-embed">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/SZihIAw5Z1U"
+                  title="ชื่อราศีและตัวเลขที่ใช้แทนราศี"
+                  loading="lazy"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <h3>จักรราศี: ชื่อราศี & เลขประจำราศี</h3>
+              <p class="muted-text">คลิปสั้นๆ สำหรับปูพื้น—ดูจบแล้วจะอ่านหัวข้ออื่นได้ลื่นขึ้น</p>
+              <a class="link" href="https://www.youtube.com/watch?v=SZihIAw5Z1U" target="_blank" rel="noreferrer"
+                >เปิดบน YouTube</a
+              >
+            </article>
+
+            <article class="video-card">
+              <div class="video-embed">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/azlCmccQvAM"
+                  title="ลักษณะนิสัยของคนลัคนาราศีเมษ"
+                  loading="lazy"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <h3>ลัคนา 12 ราศี: ตัวอย่าง (ราศีเมษ)</h3>
+              <p class="muted-text">ดูเป็นตัวอย่างก่อน แล้วค่อยไปเลือกราศีของคุณในเพลย์ลิสต์เดียวกัน</p>
+              <a class="link" href="https://www.youtube.com/watch?v=azlCmccQvAM" target="_blank" rel="noreferrer"
+                >เปิดบน YouTube</a
+              >
+            </article>
+
+            <article class="video-card">
+              <div class="video-embed">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/VV6qqgddjss"
+                  title="เรือนภพ: ภพศุภะ (ตัวอย่างการอ่านภพ)"
+                  loading="lazy"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <h3>เรือนภพ: ภพศุภะ (ตัวอย่างการอ่านภพ)</h3>
+              <p class="muted-text">เห็นภาพการเอา “เรือนภพ” ไปใช้อ่านจริง แบบเป็นขั้นเป็นตอน</p>
+              <a class="link" href="https://www.youtube.com/watch?v=VV6qqgddjss" target="_blank" rel="noreferrer"
+                >เปิดบน YouTube</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section muted">
+        <div class="container">
+          <div class="section-head">
+            <h2>เกี่ยวกับช่อง</h2>
+            <p>ตั้งใจทำหน้านี้ให้เป็นจุดเริ่ม: เปิดมาแล้วรู้ทันทีว่า “ควรดูอะไรก่อน” และ “จะไปต่อยังไง”</p>
+          </div>
+
+          <div class="about">
+            <div class="about-card">
+              <h3>บรมครูโหร พัฒนา พัฒนศิริ</h3>
+              <p>
+                เนื้อหาเน้นโหราศาสตร์ไทย “เชิงวิชา” จัดเป็นบทเป็นหมวดเพื่อให้คนเรียนต่อยอดได้จริง
+                ค่อยๆ ต่อชิ้นส่วนให้ครบ แล้วค่อยไปสู่การพยากรณ์แบบมีเหตุมีผล
+              </p>
+              <div class="about-actions">
+                <a class="btn btn-primary" href="https://www.youtube.com/@horapatana" target="_blank" rel="noreferrer"
+                  >ไปที่ช่อง YouTube</a
+                >
+                <a class="btn btn-ghost" href="https://www.horapatana.com/" target="_blank" rel="noreferrer"
+                  >ดูบทเรียนบนเว็บไซต์</a
+                >
+              </div>
+            </div>
+
+            <div class="about-meta" aria-label="ลิงก์สำคัญ">
+              <div class="meta-item">
+                <p class="meta-label">เว็บไซต์รวมบทเรียน</p>
+                <a class="meta-link" href="https://www.horapatana.com/" target="_blank" rel="noreferrer"
+                  >horapatana.com</a
+                >
+              </div>
+              <div class="meta-item">
+                <p class="meta-label">ช่อง YouTube</p>
+                <a class="meta-link" href="https://www.youtube.com/@horapatana" target="_blank" rel="noreferrer"
+                  >@horapatana</a
+                >
+              </div>
+              <div class="meta-item">
+                <p class="meta-label">เป้าหมายการเรียน</p>
+                <p class="meta-value">เข้าใจหลัก → ต่อระบบ → อ่านได้จริง</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>คำถามที่พบบ่อย</h2>
+          </div>
+
+          <div class="faq">
+            <details class="faq-item">
+              <summary>มือใหม่ต้องเริ่มจากอะไร?</summary>
+              <div class="faq-body">
+                <p>
+                  เริ่มจาก <strong>จักรราศี</strong> ก่อน (ให้ศัพท์พื้นฐานชัด) แล้วค่อยไป <strong>ดาวพระเคราะห์</strong> จากนั้นต่อด้วย
+                  <strong>เรือนภพ + ทักษา</strong> เพื่อเริ่มประกอบการอ่านให้เป็นขั้นตอน
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>ต้องเรียนตามลำดับไหม?</summary>
+              <div class="faq-body">
+                <p>
+                  ช่วงพื้นฐานแนะนำให้ไล่ตามลำดับ (ราศี → ดาว) จะเข้าใจเร็วและไม่สับสน หลังจากนั้นค่อย “เลือกเติม” ตามจุดที่ยังไม่แน่นได้
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>หน้านี้มีเป้าหมายอะไร?</summary>
+              <div class="faq-body">
+                <p>
+                  เป็นหน้านำทางให้คนใหม่รู้ว่า “ช่องนี้สอนอะไร เหมาะกับใคร และควรเริ่มดูชุดไหนก่อน” พร้อมลิงก์ไปยังสารบัญบทเรียน
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>อยากต่อยอดสู่การพยากรณ์/วางฤกษ์ ควรดูหมวดไหน?</summary>
+              <div class="faq-body">
+                <p>
+                  โฟกัส <strong>เรือนภพ</strong>, <strong>ทักษา</strong>, และ <strong>เกณฑ์</strong> เพราะเป็นชุดที่ช่วย “ชั่งน้ำหนัก” และประกอบการอ่านให้ครบมิติ
+                </p>
+              </div>
+            </details>
+          </div>
+
+          <div class="final-cta">
+            <div class="final-cta-copy">
+              <h2>ถ้าจะเริ่ม เริ่มให้ถูกทางตั้งแต่คลิปแรก</h2>
+              <p>กดติดตามไว้ แล้วเริ่มจากพื้นฐานตามเส้นทางที่แนะนำ—ค่อยเป็นค่อยไป แต่มั่นคง</p>
+            </div>
+            <div class="final-cta-actions">
+              <a class="btn btn-primary" href="https://www.youtube.com/@horapatana" target="_blank" rel="noreferrer"
+                >ติดตามช่อง YouTube</a
+              >
+              <a class="btn btn-ghost" href="https://www.horapatana.com/" target="_blank" rel="noreferrer"
+                >เปิดเว็บรวมบทเรียน</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-note">
+          หน้านี้เป็นหน้ารวมลิงก์/เส้นทางเริ่มเรียนสำหรับช่อง YouTube “เรียนดวงกับบรมครูโหร พัฒนา พัฒนศิริ”
+          ใช้เฉพาะลิงก์สาธารณะไปยัง YouTube และเว็บไซต์บทเรียน
+        </p>
+        <p class="footer-links">
+          <a href="#top">กลับขึ้นด้านบน</a>
+          <span aria-hidden="true">•</span>
+          <a href="https://www.youtube.com/@horapatana" target="_blank" rel="noreferrer">YouTube</a>
+          <span aria-hidden="true">•</span>
+          <a href="https://www.horapatana.com/" target="_blank" rel="noreferrer">เว็บไซต์บทเรียน</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
