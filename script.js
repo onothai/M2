@@ -72,18 +72,174 @@ function setupZodiacWheel() {
   const openBtn = qs("[data-zodiac-open]", root);
 
   const DATA = [
-    { key: "aries", th: "เมษ", title: "ราศีเมษ", desc: "โทนของ “เมษ” คือเริ่มก่อน คิดไว ทำไว เหมาะกับการตั้งต้นและตัดสินใจ", tags: ["เริ่มต้น", "ไฟ", "กล้าตัดสินใจ"] },
-    { key: "taurus", th: "พฤษภ", title: "ราศีพฤษภ", desc: "“พฤษภ” เด่นเรื่องความมั่นคง ความอดทน และการสะสมทีละนิด", tags: ["มั่นคง", "อดทน", "ค่อยเป็นค่อยไป"] },
-    { key: "gemini", th: "เมถุน", title: "ราศีเมถุน", desc: "“เมถุน” คือการสื่อสาร การเรียนรู้ และการเชื่อมโยงหลายเรื่องเข้าด้วยกัน", tags: ["สื่อสาร", "เรียนรู้", "คล่องตัว"] },
-    { key: "cancer", th: "กรกฎ", title: "ราศีกรกฎ", desc: "“กรกฎ” มีโทนของบ้าน ความผูกพัน และความรู้สึก", tags: ["บ้าน", "ผูกพัน", "อ่อนไหว"] },
-    { key: "leo", th: "สิงห์", title: "ราศีสิงห์", desc: "“สิงห์” คือความโดดเด่น ภาวะผู้นำ และศักดิ์ศรี", tags: ["ผู้นำ", "โดดเด่น", "ศักดิ์ศรี"] },
-    { key: "virgo", th: "กันย์", title: "ราศีกันย์", desc: "“กันย์” เน้นรายละเอียด งานบริการ และการจัดระเบียบ", tags: ["ละเอียด", "จัดระเบียบ", "แก้ปัญหา"] },
-    { key: "libra", th: "ตุลย์", title: "ราศีตุลย์", desc: "“ตุลย์” คือความสมดุล ความสัมพันธ์ และการชั่งน้ำหนัก", tags: ["สมดุล", "ความสัมพันธ์", "ชั่งน้ำหนัก"] },
-    { key: "scorpio", th: "พิจิก", title: "ราศีพิจิก", desc: "“พิจิก” โทนลึก เข้ม และเปลี่ยนผ่าน", tags: ["ลึก", "เปลี่ยนผ่าน", "จริงจัง"] },
-    { key: "sagittarius", th: "ธนู", title: "ราศีธนู", desc: "“ธนู” คือการขยายขอบฟ้า ความเชื่อ และการเดินทาง", tags: ["ภาพใหญ่", "เดินทาง", "เติบโต"] },
-    { key: "capricorn", th: "มกร", title: "ราศีมกร", desc: "“มกร” เด่นเรื่องวินัย โครงสร้าง และความรับผิดชอบ", tags: ["วินัย", "โครงสร้าง", "เป้าหมาย"] },
-    { key: "aquarius", th: "กุมภ์", title: "ราศีกุมภ์", desc: "“กุมภ์” คือความคิดใหม่ เครือข่าย และมุมมองที่ต่าง", tags: ["ไอเดียใหม่", "เครือข่าย", "อิสระ"] },
-    { key: "pisces", th: "มีน", title: "ราศีมีน", desc: "“มีน” โทนอ่อนโยน ละเมียด และใช้สัญชาตญาณ", tags: ["สัญชาตญาณ", "ละเมียด", "เยียวยา"] },
+    {
+      key: "aries",
+      th: "เมษ",
+      title: "ราศีเมษ",
+      range: "ประมาณ 21 มี.ค. – 19 เม.ย.",
+      element: "ไฟ",
+      modality: "จัตุร",
+      ruler: "อังคาร",
+      desc: "โทนของ “เมษ” คือเริ่มก่อน คิดไว ทำไว เหมาะกับการตั้งต้นและตัดสินใจ",
+      tags: ["เริ่มต้น", "ไฟ", "กล้าตัดสินใจ"],
+      strengths: ["กล้าเริ่ม", "พลังเยอะ", "ตัดสินใจไว"],
+      cautions: ["ใจร้อน", "เผลอหุนหัน", "เริ่มเก่งแต่ต้องฝึก “ทำต่อให้จบ”"],
+      tips: ["ตั้งเป้าสั้นๆ ชัดๆ", "พักก่อนตอบเวลาหงุดหงิด", "ทำทีละสเต็ปจะไปได้ไกล"],
+    },
+    {
+      key: "taurus",
+      th: "พฤษภ",
+      title: "ราศีพฤษภ",
+      range: "ประมาณ 20 เม.ย. – 20 พ.ค.",
+      element: "ดิน",
+      modality: "คงที่",
+      ruler: "ศุกร์",
+      desc: "“พฤษภ” เด่นเรื่องความมั่นคง ความอดทน และการสะสมทีละนิด",
+      tags: ["มั่นคง", "อดทน", "ค่อยเป็นค่อยไป"],
+      strengths: ["อดทน", "นิ่งและเสถียร", "สร้างฐานได้ดี"],
+      cautions: ["ดื้อเงียบ", "ช้าเพราะกลัวพลาด", "ติดความสบายเกินไป"],
+      tips: ["วางแผนระยะยาวแบบจับต้องได้", "แบ่งงานเป็นก้อนเล็ก", "ยืดหยุ่นกับการเปลี่ยนแปลงบ้าง"],
+    },
+    {
+      key: "gemini",
+      th: "เมถุน",
+      title: "ราศีเมถุน",
+      range: "ประมาณ 21 พ.ค. – 20 มิ.ย.",
+      element: "ลม",
+      modality: "ทวิภาวะ",
+      ruler: "พุธ",
+      desc: "“เมถุน” คือการสื่อสาร การเรียนรู้ และการเชื่อมโยงหลายเรื่องเข้าด้วยกัน",
+      tags: ["สื่อสาร", "เรียนรู้", "คล่องตัว"],
+      strengths: ["เรียนไว", "สื่อสารเก่ง", "ปรับตัวดี"],
+      cautions: ["ทำหลายอย่างจนกระจาย", "เปลี่ยนใจเร็ว", "ข้อมูลเยอะแต่ไม่ตกผลึก"],
+      tips: ["ทำโน้ต/สรุปให้ชัด", "ตั้งลำดับความสำคัญ", "เลือก 1–2 เรื่องหลักต่อช่วงเวลา"],
+    },
+    {
+      key: "cancer",
+      th: "กรกฎ",
+      title: "ราศีกรกฎ",
+      range: "ประมาณ 21 มิ.ย. – 22 ก.ค.",
+      element: "น้ำ",
+      modality: "จัตุร",
+      ruler: "จันทร์",
+      desc: "“กรกฎ” มีโทนของบ้าน ความผูกพัน และความรู้สึก",
+      tags: ["บ้าน", "ผูกพัน", "อ่อนไหว"],
+      strengths: ["ดูแลคนเก่ง", "รับรู้อารมณ์ละเอียด", "ผูกพันมั่นคง"],
+      cautions: ["อ่อนไหว", "คิดมาก", "เก็บความรู้สึกจนล้น"],
+      tips: ["สื่อสารความต้องการให้ตรง", "ตั้งขอบเขตที่ดี", "ดูแลใจตัวเองก่อนดูแลคนอื่น"],
+    },
+    {
+      key: "leo",
+      th: "สิงห์",
+      title: "ราศีสิงห์",
+      range: "ประมาณ 23 ก.ค. – 22 ส.ค.",
+      element: "ไฟ",
+      modality: "คงที่",
+      ruler: "อาทิตย์",
+      desc: "“สิงห์” คือความโดดเด่น ภาวะผู้นำ และศักดิ์ศรี",
+      tags: ["ผู้นำ", "โดดเด่น", "ศักดิ์ศรี"],
+      strengths: ["มั่นใจ", "นำทีมได้", "สร้างแรงบันดาลใจ"],
+      cautions: ["คาดหวังการยอมรับ", "อีโก้สูง", "ดื้อในความคิดตัวเอง"],
+      tips: ["ฟัง feedback ให้ครบก่อนตัดสิน", "แบ่งเครดิตให้ทีม", "ใช้พลังสร้างสรรค์แทนการแข่งขัน"],
+    },
+    {
+      key: "virgo",
+      th: "กันย์",
+      title: "ราศีกันย์",
+      range: "ประมาณ 23 ส.ค. – 22 ก.ย.",
+      element: "ดิน",
+      modality: "ทวิภาวะ",
+      ruler: "พุธ",
+      desc: "“กันย์” เน้นรายละเอียด งานบริการ และการจัดระเบียบ",
+      tags: ["ละเอียด", "จัดระเบียบ", "แก้ปัญหา"],
+      strengths: ["วิเคราะห์เก่ง", "เป็นระบบ", "ใส่ใจคุณภาพ"],
+      cautions: ["เพอร์เฟ็กชันนิสต์", "วิจารณ์ตัวเองหนัก", "คิดเยอะจนช้า"],
+      tips: ["กำหนดมาตรฐาน “พอดี”", "ทำก่อนค่อยปรับ", "พักสมองด้วยกิจวัตรง่ายๆ"],
+    },
+    {
+      key: "libra",
+      th: "ตุลย์",
+      title: "ราศีตุลย์",
+      range: "ประมาณ 23 ก.ย. – 22 ต.ค.",
+      element: "ลม",
+      modality: "จัตุร",
+      ruler: "ศุกร์",
+      desc: "“ตุลย์” คือความสมดุล ความสัมพันธ์ และการชั่งน้ำหนัก",
+      tags: ["สมดุล", "ความสัมพันธ์", "ชั่งน้ำหนัก"],
+      strengths: ["ประนีประนอมเก่ง", "มีรสนิยม", "มองได้หลายมุม"],
+      cautions: ["ลังเล", "กลัวขัดแย้ง", "ตัดสินใจช้าเพราะอยากแฟร์"],
+      tips: ["ตั้งเงื่อนไขตัดสินใจล่วงหน้า", "ซื่อสัตย์กับความต้องการตัวเอง", "ยอมรับว่าความแฟร์ไม่เท่ากันทุกกรณี"],
+    },
+    {
+      key: "scorpio",
+      th: "พิจิก",
+      title: "ราศีพิจิก",
+      range: "ประมาณ 23 ต.ค. – 21 พ.ย.",
+      element: "น้ำ",
+      modality: "คงที่",
+      ruler: "อังคาร/พลูโต",
+      desc: "“พิจิก” โทนลึก เข้ม และเปลี่ยนผ่าน",
+      tags: ["ลึก", "เปลี่ยนผ่าน", "จริงจัง"],
+      strengths: ["โฟกัสสูง", "อ่านเกมเก่ง", "ลึกซึ้งและจริงใจ"],
+      cautions: ["ระแวง", "ยึดติด", "อารมณ์เข้มข้นจนเหนื่อย"],
+      tips: ["ปล่อยวางสิ่งควบคุมไม่ได้", "คุยตรงๆ แบบไม่ทำร้าย", "เปลี่ยนพลังเข้มไปสร้างงานยาวๆ"],
+    },
+    {
+      key: "sagittarius",
+      th: "ธนู",
+      title: "ราศีธนู",
+      range: "ประมาณ 22 พ.ย. – 21 ธ.ค.",
+      element: "ไฟ",
+      modality: "ทวิภาวะ",
+      ruler: "พฤหัส",
+      desc: "“ธนู” คือการขยายขอบฟ้า ความเชื่อ และการเดินทาง",
+      tags: ["ภาพใหญ่", "เดินทาง", "เติบโต"],
+      strengths: ["มองภาพรวมเก่ง", "รักอิสระ", "เรียนรู้จากประสบการณ์"],
+      cautions: ["พูดตรงเกิน", "เบื่อง่าย", "ชอบกระโดดข้ามรายละเอียด"],
+      tips: ["ตรวจรายละเอียดก่อนปิดงาน", "เลือกเส้นทางที่สอดคล้องคุณค่า", "ตั้งวินัยให้ความฝันเดินได้จริง"],
+    },
+    {
+      key: "capricorn",
+      th: "มกร",
+      title: "ราศีมกร",
+      range: "ประมาณ 22 ธ.ค. – 19 ม.ค.",
+      element: "ดิน",
+      modality: "จัตุร",
+      ruler: "เสาร์",
+      desc: "“มกร” เด่นเรื่องวินัย โครงสร้าง และความรับผิดชอบ",
+      tags: ["วินัย", "โครงสร้าง", "เป้าหมาย"],
+      strengths: ["รับผิดชอบสูง", "อดทนระยะยาว", "วางระบบเก่ง"],
+      cautions: ["กดดันตัวเอง", "ทำงานหนักเกิน", "เคร่งจนลืมพัก"],
+      tips: ["แบ่งเป้าหมายเป็น milestone", "ฉลองชัยเล็กๆ", "พักให้พอแล้วจะไปได้ยาว"],
+    },
+    {
+      key: "aquarius",
+      th: "กุมภ์",
+      title: "ราศีกุมภ์",
+      range: "ประมาณ 20 ม.ค. – 18 ก.พ.",
+      element: "ลม",
+      modality: "คงที่",
+      ruler: "เสาร์/ยูเรนัส",
+      desc: "“กุมภ์” คือความคิดใหม่ เครือข่าย และมุมมองที่ต่าง",
+      tags: ["ไอเดียใหม่", "เครือข่าย", "อิสระ"],
+      strengths: ["คิดนอกกรอบ", "มองอนาคต", "รวมคน/ชุมชนได้"],
+      cautions: ["ดูห่างเหิน", "ดื้อในอุดมการณ์", "คิดมากจนไม่ลงมือ"],
+      tips: ["ทำ prototype เล็กๆ ก่อน", "สื่อสารความรู้สึกให้คนเข้าใจ", "ลงมือทีละขั้นจะเห็นผลจริง"],
+    },
+    {
+      key: "pisces",
+      th: "มีน",
+      title: "ราศีมีน",
+      range: "ประมาณ 19 ก.พ. – 20 มี.ค.",
+      element: "น้ำ",
+      modality: "ทวิภาวะ",
+      ruler: "พฤหัส/เนปจูน",
+      desc: "“มีน” โทนอ่อนโยน ละเมียด และใช้สัญชาตญาณ",
+      tags: ["สัญชาตญาณ", "ละเมียด", "เยียวยา"],
+      strengths: ["เข้าใจคน", "มีจินตนาการ", "เมตตาและเยียวยา"],
+      cautions: ["หลงอารมณ์", "ขอบเขตไม่ชัด", "หนีปัญหาเมื่อเครียด"],
+      tips: ["ตั้งขอบเขตให้ตัวเอง", "ทำงานแบบมีกรอบเวลา", "ใช้ศิลปะ/สมาธิช่วยรีชาร์จ"],
+    },
   ];
 
   const byKey = new Map(DATA.map((d) => [d.key, d]));
@@ -114,29 +270,64 @@ function setupZodiacWheel() {
     overlay.style.inset = "0";
     overlay.style.zIndex = "80";
     overlay.style.display = "none";
-    overlay.style.alignItems = "flex-end";
+    overlay.style.alignItems = "center";
     overlay.style.justifyContent = "center";
     overlay.style.padding = "18px";
     overlay.style.background = "rgba(0,0,0,.55)";
     overlay.style.backdropFilter = "blur(6px)";
     overlay.innerHTML = `
       <div role="dialog" aria-modal="true" aria-label="รายละเอียดราศี" style="
-        width:min(720px, 100%);
+        width:min(820px, 100%);
         border:1px solid rgba(255,255,255,.14);
         border-radius: 18px;
         background: rgba(10,16,32,.92);
         box-shadow: 0 18px 45px rgba(0,0,0,.45);
         padding: 16px;
+        max-height: min(78vh, 720px);
+        overflow: auto;
       ">
         <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:12px;">
           <div>
             <p style="margin:0 0 6px; color: rgba(159,176,218,.92); font-size:12px;">ราศีที่เลือก</p>
             <h3 data-ov-title style="margin:0; font-size:22px;">—</h3>
+            <p data-ov-meta style="margin:6px 0 0; color: rgba(193,205,235,.9); font-size:13px;">—</p>
           </div>
           <button type="button" class="btn btn-ghost btn-sm" data-ov-close style="align-self:flex-start;">ปิด</button>
         </div>
         <p data-ov-desc style="margin:10px 0 0; color: rgba(193,205,235,.95);">—</p>
-        <div data-ov-tags style="display:flex; gap:8px; flex-wrap:wrap; margin-top:12px;"></div>
+        <div style="margin-top: 12px; border-top: 1px solid rgba(255,255,255,.10); padding-top: 12px;">
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div style="border:1px solid rgba(255,255,255,.10); border-radius: 16px; padding: 12px; background: rgba(255,255,255,.03);">
+              <p style="margin:0 0 8px; font-weight:700;">สรุปสั้นๆ</p>
+              <div data-ov-tags style="display:flex; gap:8px; flex-wrap:wrap;"></div>
+            </div>
+            <div style="border:1px solid rgba(255,255,255,.10); border-radius: 16px; padding: 12px; background: rgba(255,255,255,.03);">
+              <p style="margin:0 0 8px; font-weight:700;">ข้อมูลพื้นฐาน</p>
+              <dl style="margin:0; display:grid; grid-template-columns: 120px 1fr; gap: 6px 10px; color: rgba(193,205,235,.95);">
+                <dt style="color: rgba(159,176,218,.92); font-size:12px;">ช่วงวัน</dt><dd data-ov-range style="margin:0;">—</dd>
+                <dt style="color: rgba(159,176,218,.92); font-size:12px;">ธาตุ</dt><dd data-ov-element style="margin:0;">—</dd>
+                <dt style="color: rgba(159,176,218,.92); font-size:12px;">คุณภาพ</dt><dd data-ov-modality style="margin:0;">—</dd>
+                <dt style="color: rgba(159,176,218,.92); font-size:12px;">ดาวเจ้าเรือน</dt><dd data-ov-ruler style="margin:0;">—</dd>
+              </dl>
+            </div>
+          </div>
+
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px;">
+            <div style="border:1px solid rgba(255,255,255,.10); border-radius: 16px; padding: 12px; background: rgba(255,255,255,.03);">
+              <p style="margin:0 0 8px; font-weight:700;">จุดเด่น</p>
+              <ul data-ov-strengths style="margin:0; padding-left: 18px; color: rgba(193,205,235,.95);"></ul>
+            </div>
+            <div style="border:1px solid rgba(255,255,255,.10); border-radius: 16px; padding: 12px; background: rgba(255,255,255,.03);">
+              <p style="margin:0 0 8px; font-weight:700;">ข้อควรระวัง</p>
+              <ul data-ov-cautions style="margin:0; padding-left: 18px; color: rgba(193,205,235,.95);"></ul>
+            </div>
+          </div>
+
+          <div style="border:1px solid rgba(255,255,255,.10); border-radius: 16px; padding: 12px; background: rgba(255,255,255,.03); margin-top: 12px;">
+            <p style="margin:0 0 8px; font-weight:700;">คำแนะนำการใช้พลังราศีนี้</p>
+            <ul data-ov-tips style="margin:0; padding-left: 18px; color: rgba(193,205,235,.95);"></ul>
+          </div>
+        </div>
       </div>
     `;
     document.body.appendChild(overlay);
@@ -191,11 +382,27 @@ function setupZodiacWheel() {
     const d = byKey.get(key) || byKey.get("aries");
     const ov = ensureOverlay();
     const t = qs("[data-ov-title]", ov);
+    const meta = qs("[data-ov-meta]", ov);
     const desc = qs("[data-ov-desc]", ov);
     const tags = qs("[data-ov-tags]", ov);
+    const range = qs("[data-ov-range]", ov);
+    const el = qs("[data-ov-element]", ov);
+    const mod = qs("[data-ov-modality]", ov);
+    const ruler = qs("[data-ov-ruler]", ov);
+    const strengths = qs("[data-ov-strengths]", ov);
+    const cautions = qs("[data-ov-cautions]", ov);
+    const tips = qs("[data-ov-tips]", ov);
     if (t) t.textContent = d.title;
+    if (meta) meta.textContent = [d.element, d.modality].filter(Boolean).join(" • ") || "—";
     if (desc) desc.textContent = d.desc;
     if (tags) tags.innerHTML = d.tags.map((x) => `<span class="tag">${x}</span>`).join("");
+    if (range) range.textContent = d.range || "—";
+    if (el) el.textContent = d.element || "—";
+    if (mod) mod.textContent = d.modality || "—";
+    if (ruler) ruler.textContent = d.ruler || "—";
+    if (strengths) strengths.innerHTML = (d.strengths || []).map((x) => `<li>${x}</li>`).join("");
+    if (cautions) cautions.innerHTML = (d.cautions || []).map((x) => `<li>${x}</li>`).join("");
+    if (tips) tips.innerHTML = (d.tips || []).map((x) => `<li>${x}</li>`).join("");
     ov.style.display = "flex";
   }
 
