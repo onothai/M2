@@ -20,6 +20,7 @@
   </head>
   <body>
     <a class="skip-link" href="#content">ข้ามไปเนื้อหา</a>
+    <canvas class="pointer-sparkles" data-pointer-sparkles aria-hidden="true"></canvas>
 
     <header class="site-header">
       <div class="container header-inner">
@@ -42,6 +43,7 @@
             <a href="#why">จุดเด่น</a>
             <a href="#path">เริ่มตรงไหน</a>
             <a href="#topics">หัวข้อเรียน</a>
+            <a href="#starmap">ดูราศี</a>
             <a href="#featured">วิดีโอแนะนำ</a>
             <a href="#faq">คำถามที่พบบ่อย</a>
           </div>
@@ -63,7 +65,7 @@
     </header>
 
     <main id="content">
-      <section id="top" class="hero">
+      <section id="top" class="hero reveal">
         <div class="container hero-inner">
           <div class="hero-copy">
             <p class="eyebrow">โหราศาสตร์ไทย • ค่อยเป็นค่อยไป • เน้นเข้าใจ</p>
@@ -156,7 +158,7 @@
         </div>
       </section>
 
-      <section id="why" class="section">
+      <section id="why" class="section reveal">
         <div class="container">
           <div class="section-head">
             <h2>จุดเด่นของช่องนี้</h2>
@@ -184,7 +186,7 @@
         </div>
       </section>
 
-      <section class="section muted">
+      <section class="section muted reveal">
         <div class="container">
           <div class="section-head">
             <h2>เหมาะกับใคร</h2>
@@ -207,7 +209,7 @@
         </div>
       </section>
 
-      <section id="path" class="section">
+      <section id="path" class="section reveal" data-tour="path">
         <div class="container">
           <div class="section-head">
             <h2>เริ่มเรียนตรงไหน (Learning Path)</h2>
@@ -266,7 +268,7 @@
         </div>
       </section>
 
-      <section id="topics" class="section muted">
+      <section id="topics" class="section muted reveal">
         <div class="container">
           <div class="section-head">
             <h2>หัวข้อเรียน (ภาพรวม)</h2>
@@ -310,7 +312,36 @@
         </div>
       </section>
 
-      <section id="featured" class="section">
+      <section id="starmap" class="section reveal" data-tour="zodiac">
+        <div class="container">
+          <div class="section-head">
+            <h2>ดูราศีแบบวงล้อ (กดได้)</h2>
+            <p>เอาเมาส์ไปชี้เพื่อไฮไลต์ช่องสีทอง แล้วคลิกเพื่อดูข้อมูลของราศีนั้น</p>
+          </div>
+
+          <div class="zodiac" data-zodiac>
+            <div class="zodiac-wheel" aria-label="วงล้อจักรราศี">
+              <img class="zodiac-img" src="./img/zodiac.png" alt="วงล้อจักรราศี 12 ราศี" />
+              <svg class="zodiac-svg" data-zodiac-svg viewBox="0 0 100 100" role="application" aria-label="เลือกจักรราศี"></svg>
+            </div>
+
+            <aside class="zodiac-info" aria-live="polite" aria-label="ข้อมูลราศีที่เลือก">
+              <div class="zodiac-info-inner" data-zodiac-panel>
+                <p class="zodiac-kicker">ราศีที่เลือก</p>
+                <h3 class="zodiac-title">ราศีเมษ</h3>
+                <p class="zodiac-desc">คลิกที่วงล้อเพื่อเลือกดูรายละเอียดของแต่ละราศี</p>
+                <div class="zodiac-tags" role="list" aria-label="คีย์เวิร์ด"></div>
+                <div class="zodiac-actions">
+                  <button class="btn btn-ghost btn-sm" type="button" data-zodiac-open>ดูรายละเอียด</button>
+                  <a class="btn btn-ghost btn-sm" href="#topics">ดูบทเรียนที่เกี่ยวข้อง</a>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section id="featured" class="section reveal" data-tour="featured">
         <div class="container">
           <div class="section-head">
             <h2>วิดีโอแนะนำ</h2>
@@ -375,7 +406,7 @@
         </div>
       </section>
 
-      <section class="section muted">
+      <section class="section muted reveal">
         <div class="container">
           <div class="section-head">
             <h2>เกี่ยวกับช่อง</h2>
@@ -421,7 +452,7 @@
         </div>
       </section>
 
-      <section id="faq" class="section">
+      <section id="faq" class="section reveal">
         <div class="container">
           <div class="section-head">
             <h2>คำถามที่พบบ่อย</h2>
