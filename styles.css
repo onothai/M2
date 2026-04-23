@@ -145,6 +145,7 @@ header, main, footer{position:relative; z-index:1}
 .brand-subtitle{font-size:13px; color:var(--muted)}
 
 .nav{margin-left:auto; display:flex; align-items:center; gap:14px}
+.header-tools{display:none}
 .nav-menu{
   display:flex;
   align-items:center;

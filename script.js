@@ -482,27 +482,37 @@ function setupMiniTour() {
   function targetEl(stepKey) {
     const section = document.querySelector(`[data-tour="${stepKey}"]`);
     if (!section) return null;
-    // Prefer highlighting the "main interactive" area inside each section.
-    if (stepKey === "path") return section.querySelector(".path-steps") || section.querySelector(".container") || section;
-    if (stepKey === "zodiac") return section.querySelector(".zodiac") || section.querySelector(".container") || section;
-    if (stepKey === "featured") return section.querySelector(".videos") || section.querySelector(".container") || section;
-    return section.querySelector(".container") || section;
+    const isMobile = window.matchMedia?.("(max-width: 720px)")?.matches ?? false;
+    // On small screens, prefer a smaller target so the spotlight doesn't become "full screen".
+    if (isMobile) {
+      return (
+        section.querySelector("[data-tour-target-mobile]") ||
+        section.querySelector("[data-tour-target]") ||
+        section.querySelector(".container") ||
+        section
+      );
+    }
+    // Desktop: use main target.
+    return section.querySelector("[data-tour-target]") || section.querySelector(".container") || section;
   }
 
   let posRaf = 0;
-  let stableCount = 0;
-  let lastRect = null;
+  let tracking = false;
+  let currentTarget = null;
 
   function applyPosition(el) {
     if (!open) return;
     if (!el) return;
 
     const r = el.getBoundingClientRect();
-    const pad = 10;
-    const x = clamp(r.left - pad, 12, window.innerWidth - 12);
-    const y = clamp(r.top - pad, 12, window.innerHeight - 12);
-    const w = clamp(r.width + pad * 2, 80, window.innerWidth - 24);
-    const h = clamp(r.height + pad * 2, 60, window.innerHeight - 24);
+    // Highlight should match the real content box as closely as possible.
+    const pad = 0;
+    const maxW = Math.max(1, window.innerWidth - 24);
+    const maxH = Math.max(1, window.innerHeight - 24);
+    const w = clamp(r.width + pad * 2, 80, maxW);
+    const h = clamp(r.height + pad * 2, 60, maxH);
+    const x = clamp(r.left - pad, 12, Math.max(12, window.innerWidth - 12 - w));
+    const y = clamp(r.top - pad, 12, Math.max(12, window.innerHeight - 12 - h));
 
     spot.style.left = `${x}px`;
     spot.style.top = `${y}px`;
@@ -547,51 +557,41 @@ function setupMiniTour() {
     }
   }
 
+  function startTracking(el) {
+    currentTarget = el;
+    if (tracking) return;
+    tracking = true;
+
+    const loop = () => {
+      if (!open) {
+        tracking = false;
+        posRaf = 0;
+        return;
+      }
+      if (currentTarget) applyPosition(currentTarget);
+      posRaf = requestAnimationFrame(loop);
+    };
+
+    loop();
+  }
+
+  function stopTracking() {
+    tracking = false;
+    currentTarget = null;
+    if (posRaf) cancelAnimationFrame(posRaf);
+    posRaf = 0;
+  }
+
   function position() {
     if (!open) return;
     const step = steps[idx];
     const el = targetEl(step.key);
     if (!el) return;
 
-    // Ensure on-screen (smooth), then wait until rect is stable before locking spotlight.
+    // Scroll once to bring it into view, then keep spotlight locked to the same element.
     el.scrollIntoView({ behavior: "smooth", block: "center" });
-
-    if (posRaf) cancelAnimationFrame(posRaf);
-    stableCount = 0;
-    lastRect = null;
-
-    const start = performance.now();
-    const maxWaitMs = 900;
-
-    const loop = () => {
-      if (!open) return;
-      const r = el.getBoundingClientRect();
-      const cur = { l: r.left, t: r.top, w: r.width, h: r.height };
-      if (lastRect) {
-        const dl = Math.abs(cur.l - lastRect.l);
-        const dt = Math.abs(cur.t - lastRect.t);
-        const dw = Math.abs(cur.w - lastRect.w);
-        const dh = Math.abs(cur.h - lastRect.h);
-        if (dl + dt + dw + dh < 0.9) stableCount += 1;
-        else stableCount = 0;
-      }
-      lastRect = cur;
-
-      // Keep updating while scrolling; lock after a few stable frames or timeout.
-      applyPosition(el);
-
-      const waited = performance.now() - start;
-      if (stableCount >= 3 || waited > maxWaitMs) {
-        // final snap
-        applyPosition(el);
-        posRaf = 0;
-        return;
-      }
-      posRaf = requestAnimationFrame(loop);
-    };
-
-    // run immediately
-    loop();
+    applyPosition(el);
+    startTracking(el);
   }
 
   function render() {
@@ -615,6 +615,7 @@ function setupMiniTour() {
     if (markSeen) localStorage.setItem(seenKey, "1");
     open = false;
     tour.classList.remove("is-open");
+    stopTracking();
   }
 
   function next() {
@@ -640,6 +641,14 @@ function setupMiniTour() {
 
   window.addEventListener("resize", () => position(), { passive: true });
   window.addEventListener("orientationchange", () => position(), { passive: true });
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!open) return;
+      if (currentTarget) applyPosition(currentTarget);
+    },
+    { passive: true }
+  );
   document.addEventListener("keydown", (e) => {
     if (!open) return;
     if (e.key === "Escape") closeTour(true);

@@ -49,6 +49,10 @@
           </div>
         </nav>
 
+        <div class="header-tools">
+          <button class="btn btn-ghost btn-sm" type="button" data-tour-start>ดูทัวร์</button>
+        </div>
+
         <div class="header-cta">
           <a class="btn btn-ghost" href="https://www.horapatana.com/" target="_blank" rel="noreferrer"
             >ดูบทเรียนบนเว็บไซต์</a
@@ -216,7 +220,7 @@
             <p>แนะนำให้ไล่ตามนี้ก่อน 1 รอบ พอจับแกนได้แล้วค่อยแตกไปดูหัวข้อย่อย</p>
           </div>
 
-          <div class="path-steps">
+          <div class="path-steps" data-tour-target>
             <div class="step">
               <div class="step-num" aria-hidden="true">1</div>
               <div class="step-body">
@@ -319,8 +323,8 @@
             <p>เอาเมาส์ไปชี้เพื่อไฮไลต์ช่องสีทอง แล้วคลิกเพื่อดูข้อมูลของราศีนั้น</p>
           </div>
 
-          <div class="zodiac" data-zodiac>
-            <div class="zodiac-wheel" aria-label="วงล้อจักรราศี">
+          <div class="zodiac" data-zodiac data-tour-target>
+            <div class="zodiac-wheel" aria-label="วงล้อจักรราศี" data-tour-target-mobile>
               <img class="zodiac-img" src="./img/zodiac.png" alt="วงล้อจักรราศี 12 ราศี" />
               <svg class="zodiac-svg" data-zodiac-svg viewBox="0 0 100 100" role="application" aria-label="เลือกจักรราศี"></svg>
             </div>
@@ -348,8 +352,8 @@
             <p>ถ้าไม่รู้จะเริ่มคลิปไหน ลองเริ่ม 3 คลิปนี้ก่อน แล้วค่อยไล่ต่อเป็นหมวด จะจับภาพรวมไวขึ้น</p>
           </div>
 
-          <div class="grid videos">
-            <article class="video-card">
+          <div class="grid videos" data-tour-target>
+            <article class="video-card" data-tour-target-mobile>
               <div class="video-embed">
                 <iframe
                   src="https://www.youtube-nocookie.com/embed/SZihIAw5Z1U"
